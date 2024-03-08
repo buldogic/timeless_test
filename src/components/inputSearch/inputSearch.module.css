@@ -1,0 +1,17 @@
+.containerInput {
+  margin: 20px 0 20px 0;
+}
+
+.inputSearch {
+  box-sizing: border-box;
+  width: 332px;
+  height: 52px;
+  padding: 14px 16px 14px 8px;
+  border-radius: 16px;
+  background-color: #1e2027;
+  outline: none;
+  border: none;
+  font-family: "Jura", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
