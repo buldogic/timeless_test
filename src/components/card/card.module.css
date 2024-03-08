@@ -6,6 +6,7 @@
   height: 600px;
   align-content: flex-start;
   position: relative;
+  transition: opacity 0.5s ease;
 }
 
 .containerCard {
@@ -108,6 +109,7 @@ span {
   height: 20px;
   background: linear-gradient(to top, rgba(18, 20, 27, 0), rgba(18, 20, 27, 1));
   pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 .gradientDown {
   position: fixed;
@@ -121,6 +123,7 @@ span {
     rgba(18, 20, 27, 1)
   );
   pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 @media (min-width: 2073px) {

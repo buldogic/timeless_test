@@ -11,6 +11,7 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = (props) => {
+  const [isActive, setIsActive] = useState<boolean>(false);
   const queryClient = useQueryClient();
   const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(
     null
@@ -23,6 +24,7 @@ export const Card: React.FC<CardProps> = (props) => {
     getUser
   );
 
+  console.log(isActive);
   const handleDelete = (
     e: React.MouseEvent<HTMLImageElement>,
     userId: string
@@ -109,13 +111,19 @@ export const Card: React.FC<CardProps> = (props) => {
     }
   };
 
-
   return (
     <div
       className={style.container}
       style={{ overflowY: "scroll", maxHeight: "calc(100vh - 20px)" }}
+      onScroll={() => {
+        setIsActive(true);
+
+        setTimeout(() => {
+          setIsActive(false);
+        }, 1000);
+      }}
     >
-      <div className={style.gradientUp}></div>
+      {isActive ? <div className={style.gradientUp}></div> : ""}
       {isSuccess &&
         userData?.map((user, index) => {
           return (
@@ -170,7 +178,7 @@ export const Card: React.FC<CardProps> = (props) => {
             </div>
           );
         })}
-      <div className={style.gradientDown}></div>
+      {isActive ? <div className={style.gradientDown}></div> : ""}
     </div>
   );
 };
