@@ -24,7 +24,6 @@ export const Card: React.FC<CardProps> = (props) => {
     getUser
   );
 
-  console.log(isActive);
   const handleDelete = (
     e: React.MouseEvent<HTMLImageElement>,
     userId: string

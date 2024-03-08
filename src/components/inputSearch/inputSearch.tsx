@@ -5,11 +5,8 @@ interface filterProps {
   setFilterValue: Function;
 }
 
-
 export const InputSearch: React.FC<filterProps> = (props) => {
   const [value, setValue] = useState<string>("");
-
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
@@ -18,10 +15,9 @@ export const InputSearch: React.FC<filterProps> = (props) => {
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      props.setFilterValue(value) 
+      props.setFilterValue(value);
     }
   };
-
 
   return (
     <div className={style.containerInput}>
