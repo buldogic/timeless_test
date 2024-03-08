@@ -12,12 +12,10 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = (props) => {
   const queryClient = useQueryClient();
-  const cardContainerRef = useRef<HTMLDivElement | null>(null);
-  const [showGradientUp, setShowGradientUp] = useState(false);
-  const [showGradientDown, setShowGradientDown] = useState(false);
   const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(
     null
   );
+
   const { filterValue } = props;
 
   const { isLoading, error, data, isSuccess } = useQuery<typesUser>(
@@ -111,38 +109,13 @@ export const Card: React.FC<CardProps> = (props) => {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (cardContainerRef.current) {
-        setShowGradientUp(cardContainerRef.current.scrollTop > 0);
-        setShowGradientDown(
-          cardContainerRef.current.scrollTop +
-            cardContainerRef.current.clientHeight <
-            cardContainerRef.current.scrollHeight
-        );
-      }
-    };
-
-    const container = cardContainerRef.current;
-
-    if (container) {
-      container.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [cardContainerRef.current]);
 
   return (
     <div
       className={style.container}
-      ref={cardContainerRef}
-      style={{ overflowY: "auto", maxHeight: "calc(100vh - 20px)" }}
+      style={{ overflowY: "scroll", maxHeight: "calc(100vh - 20px)" }}
     >
-      {showGradientUp && <div className={style.gradientUp}></div>}
+      <div className={style.gradientUp}></div>
       {isSuccess &&
         userData?.map((user, index) => {
           return (
@@ -197,7 +170,7 @@ export const Card: React.FC<CardProps> = (props) => {
             </div>
           );
         })}
-      {showGradientDown && <div className={style.gradientDown}></div>}
+      <div className={style.gradientDown}></div>
     </div>
   );
 };
