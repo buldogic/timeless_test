@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useQuery, useQueryClient } from "react-query";
 import { typesUser } from "../../utils/typesUser";
 import style from "./card.module.css";
