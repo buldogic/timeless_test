@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useQuery, useQueryClient } from "react-query";
 import { typesUser } from "../../utils/typesUser";
 import style from "./card.module.css";
@@ -12,6 +12,8 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = (props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+
+  const idTimeout = useRef<number | null>(null);
   const queryClient = useQueryClient();
   const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(
     null
@@ -116,9 +118,13 @@ export const Card: React.FC<CardProps> = (props) => {
       style={{ overflowY: "scroll", maxHeight: "calc(100vh - 20px)" }}
       onScroll={() => {
         setIsActive(true);
-
-        setTimeout(() => {
+        if (idTimeout.current) {
+          clearTimeout(idTimeout.current);
+        }
+      
+        idTimeout.current = window.setTimeout(() => {
           setIsActive(false);
+          idTimeout.current = null
         }, 1000);
       }}
     >
@@ -145,7 +151,7 @@ export const Card: React.FC<CardProps> = (props) => {
                   >
                     {user.name.first} {user.name.last}
                   </div>
-                  <div>{user.email}</div>
+                  <div className={style.cardHeaderEmail}>{user.email}</div>
                 </div>
                 {selectedCardIndex === index && (
                   <div className={style.containerDelete}>
