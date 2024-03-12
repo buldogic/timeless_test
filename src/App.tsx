@@ -1,24 +1,20 @@
-import { QueryClient, QueryClientProvider } from "react-query";
-import "./App.css";
-import { UserPages } from "./pages/UserPages/UserPages";
-
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { UserPages } from './Pages/UserPages/UserPages'
 
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false
-    }
-
-  }
-});
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+		},
+	},
+})
 
 function App() {
-
-return (
-  <QueryClientProvider  client={queryClient}>
-    <UserPages/>
-  </QueryClientProvider>
-)
+	return (
+		<QueryClientProvider client={queryClient}>
+			<UserPages />
+		</QueryClientProvider>
+	)
 }
 
-export default App;
+export default App

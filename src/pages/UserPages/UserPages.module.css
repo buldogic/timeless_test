@@ -1,23 +1,23 @@
 .container {
-  padding: 40px;
+	padding: 40px;
 }
 
 .content {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .headerText {
-  font-family: "Jura", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  font-style: normal;
-  color: #cf7b5a;
-  cursor: pointer;
+	font-family: 'Jura', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	color: #cf7b5a;
+	cursor: pointer;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

@@ -1,0 +1,41 @@
+.containerStat {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.Group {
+	display: flex;
+	align-items: baseline;
+	gap: 16px;
+}
+
+.GroupLabel > div {
+	height: 20px;
+	width: 44px;
+	font-family: 'Jura', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 12px;
+	color: #8c8988;
+	margin-top: 16px;
+}
+
+.GroupCount > div {
+	height: 20px;
+	font-family: 'Jura', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 14px;
+	color: #dcd8d3;
+	margin-top: 16px;
+}
+
+h2 {
+	font-family: 'Jura', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 16px;
+}

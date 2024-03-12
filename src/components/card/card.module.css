@@ -1,148 +1,148 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  width: 1028px;
-  height: 600px;
-  align-content: flex-start;
-  position: relative;
-  transition: opacity 0.5s ease;
-  overflow-x: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	width: 1028px;
+	height: 600px;
+	align-content: flex-start;
+	position: relative;
+	transition: opacity 0.5s ease;
+	overflow-x: hidden;
 }
 
 .containerCard {
-  position: relative;
-  width: 332px;
-  height: 196px;
-  background-color: #1a1c23;
-  padding: 20px;
-  border-radius: 16px;
-  color: #dcd8d3;
-  box-sizing: border-box;
-  width: calc((100% - 32px) / 3);
+	position: relative;
+	width: 332px;
+	height: 196px;
+	background-color: #1a1c23;
+	padding: 20px;
+	border-radius: 16px;
+	color: #dcd8d3;
+	box-sizing: border-box;
+	width: calc((100% - 32px) / 3);
 }
 
 img {
-  width: 56px;
-  height: 56px;
-  border-radius: 28px;
-  opacity: 80%;
+	width: 56px;
+	height: 56px;
+	border-radius: 28px;
+	opacity: 80%;
 }
 
 .cardHeader {
-  display: flex;
-  padding-bottom: 16px;
+	display: flex;
+	padding-bottom: 16px;
 }
 
 .cardHeaderContact {
-  padding-left: 16px;
-  width: 183px;
+	padding-left: 16px;
+	width: 183px;
 }
 
 .cardHeaderName,
 .cardHeaderNameActive {
-  font-family: "Jura", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 20px;
-  padding-bottom: 8px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: #dcd8d3; 
+	font-family: 'Jura', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 20px;
+	padding-bottom: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #dcd8d3;
 }
 
 .cardHeaderNameActive {
-  color: #cf7b5a; 
+	color: #cf7b5a;
 }
 
 .cardHeaderEmail {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .cardInfo {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 span {
-  display: inline-block;
-  width: 57px;
-  color: #8c8988;
-  font-size: 12px;
-  margin-right: 16px;
+	display: inline-block;
+	width: 57px;
+	color: #8c8988;
+	font-size: 12px;
+	margin-right: 16px;
 }
 
 .cardInfoText > div {
-  width: 219px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-bottom: 12px;
+	width: 219px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-bottom: 12px;
 }
 
 .active {
-  border: 1px solid #cf7b5a;
+	border: 1px solid #cf7b5a;
 }
 
 .delete {
-  width: 24px;
-  height: 24px;
+	width: 24px;
+	height: 24px;
 }
 
 .containerDelete {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgb(255, 44, 71, 20%);
-  border-radius: 0 16px 0 16px;
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  box-sizing: border-box;
-  background-color: rgb(75, 78, 91, 10%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border: 1px solid rgb(255, 44, 71, 20%);
+	border-radius: 0 16px 0 16px;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	box-sizing: border-box;
+	background-color: rgb(75, 78, 91, 10%);
 }
 
 .gradientUp {
-  position: fixed;
-  z-index: 1;
-  width: 1012px;
-  height: 20px;
-  background: linear-gradient(to top, rgba(18, 20, 27, 0), rgba(18, 20, 27, 1));
-  pointer-events: none;
-  transition: opacity 0.5s ease;
+	position: fixed;
+	z-index: 1;
+	width: 1012px;
+	height: 20px;
+	background: linear-gradient(to top, rgba(18, 20, 27, 0), rgba(18, 20, 27, 1));
+	pointer-events: none;
+	transition: opacity 0.5s ease;
 }
 .gradientDown {
-  position: fixed;
-  z-index: 1;
-  bottom: 46px;
-  width: 1012px;
-  height: 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(18, 20, 27, 0),
-    rgba(18, 20, 27, 1)
-  );
-  pointer-events: none;
-  transition: opacity 0.5s ease;
+	position: fixed;
+	z-index: 1;
+	bottom: 46px;
+	width: 1012px;
+	height: 20px;
+	background: linear-gradient(
+		to bottom,
+		rgba(18, 20, 27, 0),
+		rgba(18, 20, 27, 1)
+	);
+	pointer-events: none;
+	transition: opacity 0.5s ease;
 }
 
 @media (min-width: 2073px) {
-  .containerCard {
-    width: calc(20% - 16px);
-  }
-  .gradientUp {
-    width: 1725px;
-  }
-  .gradientDown {
-    width: 1725px;
-  }
-  .container {
-    width: 1725px;
-  }
+	.containerCard {
+		width: calc(20% - 16px);
+	}
+	.gradientUp {
+		width: 1725px;
+	}
+	.gradientDown {
+		width: 1725px;
+	}
+	.container {
+		width: 1725px;
+	}
 }
